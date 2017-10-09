@@ -6,6 +6,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="semantic.min.js"></script>
     <link rel="stylesheet" href="./semantic.min.css"></link>
+
   </head>
   <body>
     <div class="ui menu">
@@ -21,8 +22,10 @@
         </div>
       </div>
     </div>
+    <div id="app"></div>
     <script type="text/javascript">
-      $('.ui.dropdown').dropdown();
+      $(".ui.dropdown").dropdown({onChange:function(value,text){console.log("a", value, text);}})
     </script>
+    <script type="text/javascript" src="bundle-basic.js"></script>
   </body>
 </html>
